@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>1986 RUNNING CLUB · 혼자 뛰지 말고, 같이 꾸준히</title>
+<meta name="description" content="매주 수요일 저녁 7시, 지축 창릉천에서 함께 달리는 러닝 커뮤니티. 기록 경쟁 없이 걷뛰도 환영합니다. 1986 FITNESS 지축점 운영.">
+<meta name="theme-color" content="#0a0a0b">
+<meta property="og:type" content="website">
+<meta property="og:title" content="1986 RUNNING CLUB">
+<meta property="og:description" content="혼자 뛰지 말고, 같이 꾸준히. 매주 수요일 19:00 · 지축 창릉천">
+<meta property="og:locale" content="ko_KR">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script>
+/* ── 링크 설정: 실제 주소가 생기면 이 부분만 바꾸면 사이트 전체에 반영됩니다 ── */
+window.SITE = {
+  kakaoOpenChat: "",                 // 예: "https://open.kakao.com/o/xxxxxxx"
+  joinForm:      "",                 // 가입 신청 구글폼 주소
+  missionForm:   "",                 // 러닝 인증 제출 구글폼 주소
+  instagram:     "",                 // 예: "https://instagram.com/1986fitness"
+  naverMap:      "",                 // 집결 장소 지도 링크
+  phone:         ""                  // 예: "031-000-0000"
+};
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main">본문 바로가기</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="#top">
+      <span class="brand__mark">1986</span>
+      <span class="brand__sub">RUNNING CLUB</span>
+    </a>
+    <nav class="nav__links" aria-label="주요 메뉴">
+      <a href="#weekly">수요일 러닝</a>
+      <a href="#groups">페이스 그룹</a>
+      <a href="#mission">러닝 미션</a>
+      <a href="#board">러닝 보드</a>
+      <a href="#price">멤버십</a>
+    </nav>
+    <a class="btn btn--sm js-join" href="#join">가입하기</a>
+    <button class="nav__toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile" id="mobileMenu" hidden>
+    <a href="#weekly">수요일 러닝</a>
+    <a href="#groups">페이스 그룹</a>
+    <a href="#timeline">한 시간 흐름</a>
+    <a href="#mission">러닝 미션</a>
+    <a href="#board">러닝 보드</a>
+    <a href="#price">멤버십</a>
+    <a href="#crew">FIRST CREW</a>
+    <a href="#faq">자주 묻는 질문</a>
+    <a class="mobile__cta js-join" href="#join">가입하기</a>
+  </div>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="wrap hero__inner">
+    <p class="hero__eyebrow reveal">1986 FITNESS 지축점 · 지축 러닝 커뮤니티</p>
+    <h1 class="hero__title reveal">
+      혼자 뛰지 말고,<br>
+      <em>같이 꾸준히.</em>
+    </h1>
+    <p class="hero__lead reveal">
+      잘 뛰는 사람을 위한 러닝클럽이 아니라,<br>
+      꾸준히 같이 뛰고 싶은 사람을 위한 러닝클럽.
+    </p>
+
+    <div class="hero__meta reveal">
+      <div class="meta"><span class="meta__k">매주</span><span class="meta__v">수요일</span></div>
+      <div class="meta"><span class="meta__k">시간</span><span class="meta__v">19:00–20:00</span></div>
+      <div class="meta"><span class="meta__k">장소</span><span class="meta__v">지축역 인근 창릉천</span></div>
+      <div class="meta"><span class="meta__k">코스</span><span class="meta__v">왕복 약 5km</span></div>
+    </div>
+
+    <div class="countdown reveal" id="countdown" aria-live="polite">
+      <span class="countdown__label">다음 정기 러닝까지</span>
+      <span class="countdown__value" id="countdownValue">–</span>
+    </div>
+
+    <div class="hero__cta reveal">
+      <a class="btn btn--primary js-join" href="#join">이번 주 수요일 참여하기</a>
+      <a class="btn btn--ghost" href="#weekly">어떻게 진행되나요?</a>
+    </div>
+
+    <p class="hero__note reveal">걷뛰 가능 · 기록 경쟁 없음 · 전 연령 · 헬스 회원권 없어도 가입 가능</p>
+  </div>
+</section>
+
+<!-- ══ 컨셉 ══ -->
+<section class="sec" id="concept">
+  <div class="wrap">
+    <p class="kicker reveal">CONCEPT</p>
+    <h2 class="h2 reveal">러닝 수업이 아니라,<br>매주 만나는 러닝 모임입니다.</h2>
+    <div class="split">
+      <ul class="list list--no reveal">
+        <li>러닝 전문 수업</li>
+        <li>기록 단축 프로그램</li>
+        <li>선수급 러닝 훈련</li>
+        <li>페이스 강요</li>
+      </ul>
+      <ul class="list list--yes reveal">
+        <li>누구나 참여하는 러닝 모임</li>
+        <li>초보자도 부담 없는 러닝</li>
+        <li>걷다 뛰다 해도 괜찮음</li>
+        <li>10대 후반부터 60대까지 전 연령</li>
+        <li>기록 경쟁 없음</li>
+        <li>매주 수요일, 빠짐없이</li>
+      </ul>
+    </div>
+    <blockquote class="quote reveal">
+      “이번 주 30km 뛰었어요!” 보다<br>
+      <strong>“이번 주 처음으로 1km 뛰었어요!”</strong> 에<br>
+      똑같이 반응해주는 곳이 되고 싶습니다.
+    </blockquote>
+  </div>
+</section>
+
+<!-- ══ 수요일 러닝 ══ -->
+<section class="sec sec--alt" id="weekly">
+  <div class="wrap">
+    <p class="kicker reveal">WEEKLY RUN</p>
+    <h2 class="h2 reveal">수요일 7시 = 창릉천</h2>
+    <p class="lead reveal">
+      매주 장소를 바꾸지 않습니다. 헬스장에 모였다가 이동하지도 않습니다.
+      창릉천 같은 자리에서 바로 만나, 습관이 되도록 합니다.
+    </p>
+
+    <div class="cards reveal">
+      <article class="card">
+        <span class="card__ico" aria-hidden="true">📅</span>
+        <h3>매주 수요일 19:00</h3>
+        <p>퇴근 후 참여할 수 있으면서 너무 늦게 끝나지 않는 시간. 요일과 시간은 고정입니다.</p>
+      </article>
+      <article class="card">
+        <span class="card__ico" aria-hidden="true">📍</span>
+        <h3>지축역 인근 창릉천</h3>
+        <p>매주 동일한 출발 지점에서 집결합니다. 1986 FITNESS 지축점은 운영 주체이자 브랜드 베이스입니다.</p>
+        <a class="card__link js-map" href="#join" hidden>집결 장소 지도 보기 →</a>
+      </article>
+      <article class="card">
+        <span class="card__ico" aria-hidden="true">🏃</span>
+        <h3>왕복 약 5km</h3>
+        <p>5km 완주는 의무가 아닙니다. 1~2km만 뛰고 돌아와도 되고, 더 뛰고 싶으면 추가 러닝도 가능합니다.</p>
+      </article>
+      <article class="card">
+        <span class="card__ico" aria-hidden="true">🎽</span>
+        <h3>트레이너 동반</h3>
+        <p>따로 교육 시간을 만들지 않습니다. 함께 뛰면서 필요한 부분만 짧게 봐드립니다.</p>
+      </article>
+    </div>
+
+    <div class="coach reveal">
+      <p class="coach__label">러닝 중 코칭은 이 정도입니다</p>
+      <div class="coach__bubbles">
+        <span>“보폭 조금만 줄여볼게요.”</span>
+        <span>“속도 조금 낮춰주세요.”</span>
+        <span>“상체 힘 빼고 편하게 가세요.”</span>
+        <span>“호흡 괜찮으세요?”</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 페이스 그룹 ══ -->
+<section class="sec" id="groups">
+  <div class="wrap">
+    <p class="kicker reveal">PACE GROUP</p>
+    <h2 class="h2 reveal">그날 컨디션대로 고르세요</h2>
+    <p class="lead reveal">정해진 페이스 숫자는 없습니다. “대화가 얼마나 되는가”가 기준입니다. 매주 다른 그룹을 골라도 괜찮습니다.</p>
+
+    <div class="groups reveal">
+      <article class="group group--easy">
+        <span class="group__dot" aria-hidden="true"></span>
+        <h3>EASY</h3>
+        <p class="group__tag">러닝 초보 · 걷뛰</p>
+        <p class="group__desc">대화하면서 뛸 수 있고, 필요하면 언제든 걸어도 되는 수준.</p>
+        <ul>
+          <li>러닝 경험이 거의 없는 분</li>
+          <li>체력이 부족하다고 느끼는 분</li>
+          <li>천천히 뛰고 싶은 분</li>
+        </ul>
+      </article>
+      <article class="group group--run">
+        <span class="group__dot" aria-hidden="true"></span>
+        <h3>RUN</h3>
+        <p class="group__tag">일반 러너</p>
+        <p class="group__desc">편안하게 대화할 수 있는 조깅 페이스. 대부분의 회원이 여기 속합니다.</p>
+        <ul>
+          <li>5km 정도는 편하게 뛰고 싶은 분</li>
+          <li>옆 사람과 이야기하며 뛰고 싶은 분</li>
+        </ul>
+      </article>
+      <article class="group group--plus">
+        <span class="group__dot" aria-hidden="true"></span>
+        <h3>RUN+</h3>
+        <p class="group__tag">러닝 경험자</p>
+        <p class="group__desc">짧은 대화가 가능한 정도의 페이스. 5km 이후 추가 러닝도 가능합니다.</p>
+        <ul>
+          <li>꾸준히 달려온 경험이 있는 분</li>
+          <li>단, 기록 경쟁은 하지 않습니다</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 타임라인 ══ -->
+<section class="sec sec--alt" id="timeline">
+  <div class="wrap">
+    <p class="kicker reveal">1 HOUR</p>
+    <h2 class="h2 reveal">한 시간, 이렇게 흘러갑니다</h2>
+    <ol class="timeline reveal">
+      <li><span class="timeline__t">19:00</span><div><h3>현장 집결</h3><p>출석 확인 · 신규 회원 인사 · 간단한 컨디션 체크</p></div></li>
+      <li><span class="timeline__t">19:05</span><div><h3>단체 워밍업</h3><p>다 함께 약 5분</p></div></li>
+      <li><span class="timeline__t">19:10</span><div><h3>그룹별 러닝 START</h3><p>EASY / RUN / RUN+ 로 나뉘어 출발</p></div></li>
+      <li><span class="timeline__t">19:40</span><div><h3>러닝 종료</h3><p>기본 30~40분, 컨디션에 따라 최대 60분</p></div></li>
+      <li><span class="timeline__t">19:50</span><div><h3>걷기 · 정리 · 단체사진</h3><p>가볍게 마무리하고 한 장 남깁니다</p></div></li>
+      <li><span class="timeline__t">20:00</span><div><h3>공식 종료</h3><p>이후는 자유. 더 뛰어도, 바로 가셔도 됩니다</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══ 러닝 미션 ══ -->
+<section class="sec" id="mission">
+  <div class="wrap">
+    <p class="kicker reveal">RUNNING MISSION</p>
+    <h2 class="h2 reveal">1km 이상 달렸다면,<br>그날은 인증 1회입니다.</h2>
+    <p class="lead reveal">
+      수요일 정기 러닝 말고도 평소에 뛴 기록을 인증하면 자동으로 쌓입니다.
+      매일 뛰어야 하는 시스템이 아닙니다. 본인 생활에 맞춰 참여하세요.
+    </p>
+
+    <div class="mission">
+      <div class="mission__flow reveal">
+        <div class="step"><span class="step__n">1</span><p>러닝앱·스마트워치로 <strong>1km 이상</strong> 달리기</p></div>
+        <div class="step"><span class="step__n">2</span><p>기록 화면 <strong>캡처</strong><br><small>삼성헬스 · 애플 운동 · 스트라바 · 나이키런클럽 등 앱 제한 없음</small></p></div>
+        <div class="step"><span class="step__n">3</span><p>인증 폼에 <strong>이름 · 날짜 · 거리 · 사진</strong> 제출</p></div>
+        <div class="step"><span class="step__n">4</span><p>자동으로 <strong>횟수 · 누적 거리</strong> 집계</p></div>
+      </div>
+
+      <div class="rewards reveal">
+        <h3 class="rewards__title">인증 혜택</h3>
+        <ul class="rewards__list">
+          <li><b>10회</b><span aria-hidden="true">🥤</span><span>단백질 음료 1개</span><em class="is-now">운영 중</em></li>
+          <li><b>20회</b><span aria-hidden="true">🎟</span><span>단백질 음료 + 행사 우선권</span><em>확대 예정</em></li>
+          <li><b>30회</b><span aria-hidden="true">🎁</span><span>RUNNING CLUB 굿즈</span><em>확대 예정</em></li>
+        </ul>
+        <p class="rewards__note">회원 수가 늘어나면 혜택을 단계적으로 추가합니다.</p>
+        <a class="btn btn--primary js-mission" href="#join">러닝 인증하기</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 러닝 보드 ══ -->
+<section class="sec sec--alt" id="board">
+  <div class="wrap">
+    <p class="kicker reveal">RUNNING BOARD</p>
+    <h2 class="h2 reveal">순위표가 아니라, 꾸준함 기록판</h2>
+    <p class="lead reveal">누가 빠른지가 아니라, 누가 꾸준히 하고 있는지를 보여주는 판입니다.</p>
+    <div class="board reveal">
+      <table class="board__table">
+        <caption class="sr-only">회원별 누적 인증 현황</caption>
+        <thead>
+          <tr><th scope="col">회원</th><th scope="col">인증</th><th scope="col">누적 거리</th><th scope="col">상태</th></tr>
+        </thead>
+        <tbody id="boardBody"></tbody>
+      </table>
+      <p class="board__meta" id="boardMeta"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 멤버십 ══ -->
+<section class="sec" id="price">
+  <div class="wrap">
+    <p class="kicker reveal">MEMBERSHIP</p>
+    <h2 class="h2 reveal">헬스 회원권과 별개로 운영합니다</h2>
+    <p class="lead reveal">RUNNING CLUB만 가입해도 됩니다. 월 4회(5주가 있는 달은 5회) 정기 러닝에 참여할 수 있습니다.</p>
+
+    <div class="plans reveal">
+      <article class="plan">
+        <h3>러닝 체험</h3>
+        <p class="plan__price"><b>5,000</b><span>원 / 1회</span></p>
+        <ul>
+          <li>수요일 정기 러닝 1회 참여</li>
+          <li>체험 후 가입 시 <strong>첫 달 구독료에서 5,000원 차감</strong></li>
+          <li>맞는지 먼저 보고 결정하세요</li>
+        </ul>
+        <a class="btn btn--ghost js-join" href="#join">체험 신청</a>
+      </article>
+
+      <article class="plan plan--feature">
+        <span class="plan__badge">FIRST CREW</span>
+        <h3>초창기 멤버</h3>
+        <p class="plan__price"><b>9,900</b><span>원 / 월</span></p>
+        <ul>
+          <li>초기 20~30명 한정</li>
+          <li>전용 굿즈 · 행사 우선권</li>
+          <li>대회 단체 참가</li>
+          <li>클럽을 처음 만든 멤버라는 이름</li>
+        </ul>
+        <a class="btn btn--primary js-join" href="#join">FIRST CREW 신청</a>
+      </article>
+
+      <article class="plan">
+        <h3>정기 구독</h3>
+        <p class="plan__price"><b>19,900</b><span>원 / 월</span></p>
+        <ul>
+          <li>매주 수요일 정기 러닝 참여</li>
+          <li>RUNNING MISSION 인증 · 혜택</li>
+          <li>커뮤니티 오픈채팅 참여</li>
+          <li class="plan__hl">1986 FITNESS 회원은 월 9,900원</li>
+        </ul>
+        <a class="btn btn--ghost js-join" href="#join">가입 신청</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FIRST CREW ══ -->
+<section class="sec sec--crew" id="crew">
+  <div class="wrap">
+    <p class="kicker reveal">⭐ FIRST CREW</p>
+    <h2 class="h2 reveal">초기 20~30명,<br>이 클럽을 처음 만든 사람들</h2>
+    <p class="lead reveal">단순 할인 회원이 아닙니다. 1986 RUNNING CLUB이 어떻게 굴러갈지 함께 만드는 멤버입니다.</p>
+    <div class="perks reveal">
+      <div class="perk"><span aria-hidden="true">①</span><h3>특별 회원가</h3><p>일반 19,900원 → <strong>월 9,900원</strong></p></div>
+      <div class="perk"><span aria-hidden="true">②</span><h3>전용 굿즈</h3><p>러닝 티셔츠 · 양말 · 스티커 · 팔찌</p></div>
+      <div class="perk"><span aria-hidden="true">③</span><h3>행사 우선권</h3><p>주말·야간·브런치 러닝 우선 참여</p></div>
+      <div class="perk"><span aria-hidden="true">④</span><h3>대회 단체 참가</h3><p>5K · 10K 대회에 클럽 이름으로 함께</p></div>
+    </div>
+    <div class="center reveal"><a class="btn btn--primary btn--lg js-join" href="#join">FIRST CREW 합류하기</a></div>
+  </div>
+</section>
+
+<!-- ══ 로드맵 ══ -->
+<section class="sec" id="future">
+  <div class="wrap">
+    <p class="kicker reveal">FUTURE</p>
+    <h2 class="h2 reveal">천천히, 하지만 계속</h2>
+    <p class="lead reveal">초기에는 프로그램을 늘리지 않습니다. 가장 중요한 건 매주 수요일을 빠짐없이 지키는 것입니다.</p>
+    <ol class="road reveal">
+      <li><span>STEP 1</span><p>매주 수요일 정기 러닝</p></li>
+      <li><span>STEP 2</span><p>개인 RUNNING MISSION</p></li>
+      <li><span>STEP 3</span><p>월 1회 주말 러닝</p></li>
+      <li><span>STEP 4</span><p>지역·외부 러닝 장소 방문</p></li>
+      <li><span>STEP 5</span><p>러닝 대회 단체 참가</p></li>
+      <li><span>STEP 6</span><p>자체 RUNNING CLUB 행사</p></li>
+      <li><span>STEP 7</span><p>지축 대표 러닝 커뮤니티</p></li>
+    </ol>
+    <div class="future__tags reveal">
+      <span>🌅 아침 러닝</span><span>🌙 야간 러닝</span><span>☕ 러닝 + 브런치</span>
+      <span>🌳 다른 지역 러닝</span><span>🏃 5K 단체 러닝</span><span>🏅 대회 단체 참가</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 안전 ══ -->
+<section class="sec sec--alt" id="safety">
+  <div class="wrap">
+    <p class="kicker reveal">SAFETY</p>
+    <h2 class="h2 reveal">야외 러닝, 안전이 먼저입니다</h2>
+    <ul class="safety reveal">
+      <li>러닝화 착용</li>
+      <li>밝은 복장 권장</li>
+      <li>야간 시야 확보</li>
+      <li>자전거·보행자 주의</li>
+      <li>무리한 페이스 금지</li>
+      <li>통증 발생 시 즉시 중단</li>
+      <li>기상 악화 시 일정 변경·취소</li>
+      <li>코스 이탈 시 운영진에게 알리기</li>
+    </ul>
+    <p class="note reveal">
+      창릉천은 러너뿐 아니라 보행자와 자전거 이용자가 함께 이용하는 길입니다.
+      그룹이 길을 넓게 막지 않도록 좁혀서 달립니다.
+    </p>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="sec" id="faq">
+  <div class="wrap wrap--narrow">
+    <p class="kicker reveal">FAQ</p>
+    <h2 class="h2 reveal">자주 묻는 질문</h2>
+    <div class="faq reveal">
+      <details><summary>5km를 못 뛰는데 참여해도 되나요?</summary><p>네. 5km 완주는 의무가 아닙니다. 1~2km 뛰고 돌아오셔도 되고, 걷다 뛰다 하셔도 됩니다. EASY 그룹은 애초에 걷뛰를 전제로 운영합니다.</p></details>
+      <details><summary>헬스장 회원이 아니어도 가입할 수 있나요?</summary><p>가능합니다. RUNNING CLUB은 헬스 회원권과 별도로 운영합니다. 1986 FITNESS 회원이시면 월 9,900원으로 할인됩니다.</p></details>
+      <details><summary>나이 제한이 있나요?</summary><p>없습니다. 10대 후반부터 60대 이상까지 참여하실 수 있고, 나이가 아니라 체력과 페이스에 따라 그룹을 나눕니다.</p></details>
+      <details><summary>어디로 몇 시까지 가면 되나요?</summary><p>매주 수요일 19:00, 지축역 인근 창릉천 지정 장소입니다. 헬스장에 모였다가 이동하지 않고 현장에서 바로 만납니다. 정확한 집결 지점은 가입 후 오픈채팅 공지로 안내드립니다.</p></details>
+      <details><summary>비 오는 날은 어떻게 하나요?</summary><p>기상 상황에 따라 일정을 변경하거나 취소합니다. 당일 오픈채팅 공지로 안내드립니다.</p></details>
+      <details><summary>러닝 인증은 어떤 앱을 써야 하나요?</summary><p>앱 제한이 없습니다. 삼성헬스, 애플 운동, 스트라바, 나이키런클럽 등 거리와 날짜가 보이는 기록 화면이면 됩니다. 1km 이상이면 1회로 인정됩니다.</p></details>
+      <details><summary>한 달에 몇 번 참여할 수 있나요?</summary><p>매주 수요일이므로 기본 월 4회, 5주가 있는 달에는 5회까지 참여하실 수 있습니다.</p></details>
+      <details><summary>체험만 먼저 해볼 수 있나요?</summary><p>네. 5,000원으로 1회 체험하실 수 있고, 이후 가입하시면 첫 달 구독료에서 5,000원을 차감해 드립니다.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section class="sec sec--join" id="join">
+  <div class="wrap wrap--narrow">
+    <h2 class="h2 h2--center reveal">이번 주 수요일,<br>창릉천에서 뵙겠습니다.</h2>
+    <p class="lead lead--center reveal">
+      처음이라 어색해하지 않으셔도 됩니다. 대부분 혼자 오셔서, 같이 뛰고, 같이 사진 찍고 가십니다.
+    </p>
+    <div class="joinbox reveal">
+      <a class="btn btn--primary btn--lg js-join" href="#join">가입 신청하기</a>
+      <a class="btn btn--kakao btn--lg js-kakao" href="#join">카카오톡 오픈채팅 참여</a>
+    </div>
+    <p class="joinbox__note reveal" id="joinNote">
+      아직 신청 링크가 연결되지 않았습니다. 운영진에게 문의해 주세요.
+    </p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <div>
+      <p class="foot__brand">1986 RUNNING CLUB</p>
+      <p class="foot__sub">운영 · 1986 FITNESS 지축점</p>
+    </div>
+    <ul class="foot__meta">
+      <li>매주 수요일 19:00–20:00</li>
+      <li>지축역 인근 창릉천</li>
+      <li class="js-phone" hidden></li>
+    </ul>
+    <ul class="foot__links" id="footLinks"></ul>
+  </div>
+  <p class="foot__copy">© <span id="year"></span> 1986 RUNNING CLUB · 혼자 뛰지 말고, 같이 꾸준히.</p>
+</footer>
+
+<script src="/data/board.js"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
