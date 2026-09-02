@@ -202,7 +202,7 @@
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
 
-    ['weekly', 'groups', 'mission', 'board', 'price'].forEach(function (id) {
+    ['weekly', 'location', 'groups', 'mission', 'board', 'price'].forEach(function (id) {
       var el = document.getElementById(id);
       if (el) spy.observe(el);
     });

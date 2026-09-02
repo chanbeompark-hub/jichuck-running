@@ -180,6 +180,35 @@ ul,ol{margin:0;padding:0;list-style:none}
   background:rgba(255,255,255,.06);font-size:15px;color:var(--ink-2);
 }
 
+/* ── 찾아오는 길 ──────────────────────────────────────── */
+.sec--map{background:
+  radial-gradient(60% 55% at 22% 0%,rgba(96,165,250,.10),transparent 62%),
+  radial-gradient(50% 50% at 85% 90%,rgba(216,255,62,.07),transparent 60%),var(--bg)}
+.map{margin:40px 0 0;padding:0}
+.map__svg{
+  display:block;width:100%;height:auto;border-radius:var(--r-lg);
+  background:#0d0f11;border:1px solid var(--line);
+}
+.map__svg text{font-family:var(--font);fill:#f4f4f3}
+.mp-rail{font-size:14px;font-weight:700;fill:#1a1206;letter-spacing:.04em}
+.mp-place{font-size:19px;font-weight:800;fill:#f4f4f3;letter-spacing:-.01em;paint-order:stroke;stroke:#0d0f11;stroke-width:5px;stroke-linejoin:round}
+.mp-water{font-size:17px;font-weight:700;fill:#7fb4f0;letter-spacing:.16em}
+.mp-road{font-size:14px;font-weight:700;fill:#a8aeb6;letter-spacing:.06em;paint-order:stroke;stroke:#0d0f11;stroke-width:5px;stroke-linejoin:round}
+.mp-walk{font-size:14px;font-weight:700;fill:#d8ff3e}
+.mp-course{font-size:14px;font-weight:600;fill:#9cc7f5;paint-order:stroke;stroke:#0d0f11;stroke-width:5px;stroke-linejoin:round}
+.mp-pin-1{font-size:19px;font-weight:800;fill:#101300;letter-spacing:-.01em}
+.mp-pin-2{font-size:13px;font-weight:700;fill:#101300;opacity:.72}
+.mp-n{font-size:12px;font-weight:700;fill:#b9bcc0}
+.map__cap{margin-top:12px;font-size:13px;color:var(--ink-3)}
+
+.mapinfo{margin-top:28px;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);overflow:hidden}
+.mapinfo__row{display:grid;grid-template-columns:130px 1fr;gap:16px;padding:16px 22px;border-bottom:1px solid var(--line)}
+.mapinfo__row:last-child{border-bottom:0}
+.mapinfo__k{font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--volt)}
+.mapinfo__v{font-size:16px;color:var(--ink)}
+.mapinfo__v em{font-style:normal;color:var(--ink-3);font-size:14px}
+.mapcta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+
 /* ── 페이스 그룹 ──────────────────────────────────────── */
 .groups{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
 .group{
@@ -352,6 +381,8 @@ ul,ol{margin:0;padding:0;list-style:none}
 }
 @media (max-width:640px){
   body{font-size:16px}
+  .mapinfo__row{grid-template-columns:1fr;gap:4px;padding:14px 18px}
+  .mapcta .btn{width:100%}
   .hero{padding:112px 0 68px}
   .sec{padding:72px 0}
   .sec--join{padding:84px 0}
