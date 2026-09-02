@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://running-club-1986.pcbpcb1990.workers.dev/sitemap.xml

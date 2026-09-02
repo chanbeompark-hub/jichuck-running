@@ -10,6 +10,11 @@
 
 빌드 도구 없는 정적 사이트입니다. HTML/CSS/JS 파일만 있고, Cloudflare Workers 정적 호스팅으로 배포합니다.
 
+**배포 주소** — https://running-club-1986.pcbpcb1990.workers.dev
+
+> 오픈채팅방 개설, 구글폼 문항, 시트 자동 집계, 주간 공지 템플릿은
+> [docs/운영-가이드.md](docs/운영-가이드.md) 에 정리해 두었습니다.
+
 ---
 
 ## 폴더 구조
@@ -19,12 +24,16 @@ public/
   index.html            # 사이트 전체 (원페이지)
   404.html              # 없는 주소로 들어왔을 때
   robots.txt
+  sitemap.xml
   assets/
     css/style.css       # 전체 스타일
     js/main.js          # 카운트다운 · 메뉴 · 보드 렌더링
     favicon.svg
+    og.png              # 카카오톡·검색 공유 썸네일 (1200x630)
   data/
     board.js            # RUNNING BOARD 데이터 (여기만 고치면 됨)
+docs/
+  운영-가이드.md         # 오픈채팅 · 구글폼 · 시트 집계 · 공지 템플릿
 wrangler.jsonc          # Cloudflare 배포 설정
 ```
 
