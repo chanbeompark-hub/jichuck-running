@@ -257,6 +257,21 @@ ul,ol{margin:0;padding:0;list-style:none}
 .step small{display:block;margin-top:6px;font-size:13.5px;color:var(--ink-3);line-height:1.55}
 .rewards{padding:28px;border-radius:var(--r-lg);border:1px solid rgba(216,255,62,.28);background:linear-gradient(180deg,rgba(216,255,62,.08),transparent)}
 .rewards__title{font-size:19px;margin-bottom:18px}
+.refund{
+  padding:20px 22px;border-radius:var(--r);margin-bottom:22px;
+  background:linear-gradient(180deg,rgba(216,255,62,.16),rgba(216,255,62,.05));
+  border:1px solid rgba(216,255,62,.45);
+}
+.refund__k{
+  font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--volt);
+}
+.refund__v{margin-top:8px;font-size:clamp(20px,3vw,25px);font-weight:800;letter-spacing:-.03em;line-height:1.3}
+.refund__v b{color:var(--volt)}
+.refund__n{margin-top:10px;font-size:14px;color:var(--ink-2);line-height:1.6}
+.rewards__sub{
+  font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--ink-3);
+  margin-bottom:4px;
+}
 .rewards__list li{display:grid;grid-template-columns:46px 1fr;gap:7px 10px;padding:15px 0;border-bottom:1px solid var(--line)}
 .rewards__list li:last-child{border-bottom:0}
 .rewards__list b{font-size:16px;font-weight:800;color:var(--volt);line-height:1.5}
@@ -308,7 +323,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .perk strong{color:var(--volt)}
 
 /* ── 로드맵 ───────────────────────────────────────────── */
-.road{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;margin-top:40px}
+.road{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:40px}
 .road li{padding:20px 16px;border-radius:var(--r);background:var(--surface);border:1px solid var(--line);position:relative}
 .road li span{font-size:10.5px;font-weight:800;letter-spacing:.12em;color:var(--volt)}
 .road li p{margin-top:8px;font-size:14px;font-weight:600;line-height:1.5}
