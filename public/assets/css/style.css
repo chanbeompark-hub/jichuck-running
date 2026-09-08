@@ -3,8 +3,8 @@
    ============================================================ */
 
 :root{
-  --bg:#FBFBF7;
-  --bg-alt:#F1F4E8;
+  --bg:#FCFCF9;
+  --bg-alt:#F4F6EE;
   --surface:#FFFFFF;
   --line:rgba(23,32,10,.12);
   --line-strong:rgba(23,32,10,.26);
@@ -98,9 +98,9 @@ ul,ol{margin:0;padding:0;list-style:none}
 .hero__bg{
   position:absolute;inset:-20% -10% auto -10%;height:130%;
   background:
-    radial-gradient(62% 48% at 20% 6%,rgba(207,242,63,.42),transparent 64%),
-    radial-gradient(50% 42% at 88% 20%,rgba(147,197,253,.34),transparent 62%),
-    radial-gradient(70% 50% at 52% 100%,rgba(23,32,10,.05),transparent 62%);
+    radial-gradient(52% 40% at 16% 2%,rgba(207,242,63,.26),transparent 62%),
+    radial-gradient(42% 36% at 92% 14%,rgba(147,197,253,.16),transparent 62%),
+    radial-gradient(70% 46% at 52% 100%,rgba(23,32,10,.035),transparent 62%);
   filter:blur(6px);
 }
 .hero__bg::after{
@@ -111,8 +111,8 @@ ul,ol{margin:0;padding:0;list-style:none}
 .hero__inner{position:relative}
 .hero__eyebrow{
   display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;
-  color:var(--accent);border:1px solid rgba(91,122,0,.30);
-  padding:7px 14px;border-radius:999px;background:rgba(207,242,63,.30);
+  color:var(--accent);border:1px solid var(--line);
+  padding:7px 14px;border-radius:999px;background:var(--surface);box-shadow:var(--shadow);
 }
 .hero__title{margin:22px 0 0;font-size:clamp(40px,8.4vw,80px);font-weight:900;letter-spacing:-.045em}
 .hero__title em{font-style:normal;color:var(--accent)}
@@ -126,8 +126,8 @@ ul,ol{margin:0;padding:0;list-style:none}
 .meta__v{font-size:15px;font-weight:700}
 .countdown{
   display:inline-flex;align-items:center;gap:12px;margin-top:26px;padding:12px 20px;
-  border-radius:14px;background:linear-gradient(180deg,rgba(207,242,63,.42),rgba(207,242,63,.18));
-  border:1px solid rgba(91,122,0,.24);
+  border-radius:14px;background:var(--surface);
+  border:1px solid var(--line);box-shadow:var(--shadow);
 }
 .countdown__label{font-size:13px;color:var(--ink-2);font-weight:600}
 .countdown__value{font-size:17px;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums}
@@ -154,7 +154,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .list--no{color:var(--ink-3)}
 .list--no li{text-decoration:line-through;text-decoration-color:rgba(23,32,10,.3)}
 .list--no li::before{content:"✕";color:var(--ink-3)}
-.list--yes{border-color:rgba(91,122,0,.26);background:linear-gradient(180deg,rgba(207,242,63,.26),var(--surface) 60%)}
+.list--yes{border-color:rgba(91,122,0,.22);background:var(--surface)}
 .list--yes li{font-weight:600}
 .list--yes li::before{content:"✓";color:var(--accent)}
 .quote{
@@ -187,8 +187,8 @@ ul,ol{margin:0;padding:0;list-style:none}
 
 /* ── 찾아오는 길 ──────────────────────────────────────── */
 .sec--map{background:
-  radial-gradient(60% 55% at 22% 0%,rgba(147,197,253,.30),transparent 62%),
-  radial-gradient(50% 50% at 85% 90%,rgba(207,242,63,.26),transparent 62%),var(--bg)}
+  radial-gradient(58% 52% at 22% 0%,rgba(147,197,253,.14),transparent 62%),
+  radial-gradient(48% 48% at 86% 92%,rgba(207,242,63,.12),transparent 62%),var(--bg)}
 .map{margin:40px 0 0;padding:0}
 .map__svg{
   display:block;width:100%;height:auto;border-radius:var(--r-lg);
@@ -260,7 +260,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .step p{font-size:16px;color:var(--ink-2);line-height:1.6}
 .step strong{color:var(--ink)}
 .step small{display:block;margin-top:6px;font-size:13.5px;color:var(--ink-3);line-height:1.55}
-.rewards{padding:28px;border-radius:var(--r-lg);border:1px solid rgba(91,122,0,.24);background:linear-gradient(180deg,rgba(207,242,63,.28),var(--surface) 55%);box-shadow:var(--shadow)}
+.rewards{padding:28px;border-radius:var(--r-lg);border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow)}
 .rewards__title{font-size:19px;margin-bottom:18px}
 .refund{
   padding:20px 22px;border-radius:var(--r);margin-bottom:22px;
@@ -317,7 +317,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 
 /* ── FIRST CREW ───────────────────────────────────────── */
 .sec--crew{background:
-  radial-gradient(70% 52% at 50% 0%,rgba(207,242,63,.38),transparent 66%),var(--bg-alt)}
+  radial-gradient(68% 50% at 50% 0%,rgba(207,242,63,.20),transparent 66%),var(--bg-alt)}
 .perks{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:40px 0 36px}
 .perk{padding:26px 22px;border-radius:var(--r-lg);border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow)}
 .perk>span{font-size:20px;color:var(--accent);font-weight:800}
@@ -336,7 +336,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .road li span{font-size:10.5px;font-weight:800;letter-spacing:.12em;color:var(--accent)}
 .road li{box-shadow:var(--shadow)}
 .road li p{margin-top:8px;font-size:14px;font-weight:600;line-height:1.5}
-.road li:first-child{border-color:rgba(91,122,0,.34);background:linear-gradient(180deg,rgba(207,242,63,.38),var(--surface))}
+.road li:first-child{border-color:rgba(91,122,0,.28);background:linear-gradient(180deg,rgba(207,242,63,.16),var(--surface) 70%)}
 .future__tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
 .future__tags span{padding:9px 16px;border-radius:999px;border:1px solid var(--line);font-size:14px;color:var(--ink-2)}
 
@@ -368,7 +368,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 
 /* ── 가입 CTA ─────────────────────────────────────────── */
 .sec--join{
-  background:radial-gradient(62% 62% at 50% 0%,rgba(207,242,63,.42),transparent 64%),var(--bg);
+  background:radial-gradient(60% 58% at 50% 0%,rgba(207,242,63,.22),transparent 64%),var(--bg);
   padding:104px 0;
 }
 .joinbox{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:36px}
