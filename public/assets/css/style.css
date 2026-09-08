@@ -298,7 +298,12 @@ ul,ol{margin:0;padding:0;list-style:none}
 .perks{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:40px 0 36px}
 .perk{padding:26px 22px;border-radius:var(--r-lg);border:1px solid var(--line);background:rgba(255,255,255,.03)}
 .perk>span{font-size:20px;color:var(--volt);font-weight:800}
-.perk h3{font-size:17px;margin:12px 0 8px}
+.perk h3{font-size:17px;margin:12px 0 8px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.soon{
+  font-style:normal;font-size:11px;font-weight:700;letter-spacing:.04em;
+  color:var(--ink-3);border:1px solid var(--line);border-radius:999px;
+  padding:2px 9px;white-space:nowrap;
+}
 .perk p{font-size:14.5px;color:var(--ink-2)}
 .perk strong{color:var(--volt)}
 
