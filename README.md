@@ -46,7 +46,7 @@ wrangler.jsonc          # Cloudflare 배포 설정
 ```js
 window.SITE = {
   kakaoOpenChat: "https://open.kakao.com/o/pxirsJLi",  // 오픈채팅 (연결 완료)
-  joinForm:      "https://forms.gle/xxxxxxx",          // 가입 신청 폼
+  joinForm:      "https://naver.me/5rebl60q",          // 가입 신청 (연결 완료)
   missionForm:   "",                                    // 인증은 오픈채팅으로 받으므로 비워둡니다
   instagram:     "https://instagram.com/...",
   naverMap:      "https://naver.me/xxxxx",             // 집결 장소 지도
