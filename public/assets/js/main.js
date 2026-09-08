@@ -149,7 +149,8 @@
   window.addEventListener('resize', requestScroll, { passive: true });
 
   /* ── 4. 스크롤 등장 + 현재 섹션 표시 ──────────────── */
-  var reveals = document.querySelectorAll('.reveal');
+  // .stagger 도 함께 관찰한다. reveal 을 빼먹으면 자식이 계속 투명하게 남기 때문.
+  var reveals = document.querySelectorAll('.reveal, .stagger');
 
   // 순차 등장용 순번 부여 (--i)
   var staggers = document.querySelectorAll('.stagger');
@@ -196,6 +197,16 @@
   } else {
     for (var r3 = 0; r3 < reveals.length; r3++) reveals[r3].classList.add('is-in');
   }
+
+  // 마지막 안전장치: 5초가 지나도 화면 안에 있는데 안 나타난 요소는 그냥 보여준다.
+  setTimeout(function () {
+    for (var g = 0; g < reveals.length; g++) {
+      var el = reveals[g];
+      if (el.classList.contains('is-in')) continue;
+      var box = el.getBoundingClientRect();
+      if (box.top < window.innerHeight && box.bottom > 0) el.classList.add('is-in');
+    }
+  }, 5000);
 
   /* ── 5. 연도 ──────────────────────────────────────── */
   var year = document.getElementById('year');

@@ -377,16 +377,17 @@ ul,ol{margin:0;padding:0;list-style:none}
 .foot__copy{margin-top:36px;text-align:center;font-size:13px;color:var(--ink-3)}
 
 /* ── 모션 ─────────────────────────────────────────────── */
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.22,.8,.3,1)}
-.reveal.is-in{opacity:1;transform:none}
+/* JS 가 살아 있을 때만 숨긴다. 스크립트가 실패해도 내용은 보이게. */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.22,.8,.3,1)}
+.js .reveal.is-in{opacity:1;transform:none}
 
 /* 자식 요소 순차 등장 */
-.stagger>*{
+.js .stagger>*{
   opacity:0;transform:translateY(16px);
   transition:opacity .55s ease,transform .55s cubic-bezier(.22,.8,.3,1);
   transition-delay:calc(var(--i,0) * 70ms);
 }
-.stagger.is-in>*{opacity:1;transform:none}
+.js .stagger.is-in>*{opacity:1;transform:none}
 
 /* 히어로 등장 */
 .hero .reveal{transition-delay:calc(var(--i,0) * 90ms)}
