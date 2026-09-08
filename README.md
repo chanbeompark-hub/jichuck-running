@@ -27,51 +27,36 @@ public/
   sitemap.xml
   assets/
     css/style.css       # 전체 스타일
-    js/main.js          # 카운트다운 · 메뉴 · 보드 렌더링
+    js/main.js          # 카운트다운 · 메뉴 · 스크롤 모션
     favicon.svg
     og.png              # 카카오톡·검색 공유 썸네일 (1200x630)
-  data/
-    board.js            # RUNNING BOARD 데이터 (여기만 고치면 됨)
 docs/
-  운영-가이드.md         # 오픈채팅 · 구글폼 · 시트 집계 · 공지 템플릿
+  운영-가이드.md         # 오픈채팅 · 가입 폼 · 주간 인증 · 공지 템플릿
 wrangler.jsonc          # Cloudflare 배포 설정
 ```
 
 ---
 
-## 자주 고치게 되는 곳 2군데
+## 고칠 일이 있다면 여기 한 곳
 
-### 1. 링크 연결 — `public/index.html` 상단 `window.SITE`
+### 링크 연결 — `public/index.html` 상단 `window.SITE`
 
-카카오톡 오픈채팅방, 구글폼 주소가 생기면 여기에만 넣으면 사이트 전체 버튼에 반영됩니다.
+주소가 생기면 여기에만 넣으면 사이트 전체 버튼에 반영됩니다.
 
 ```js
 window.SITE = {
-  kakaoOpenChat: "https://open.kakao.com/o/xxxxxxx",  // 오픈채팅
-  joinForm:      "https://forms.gle/xxxxxxx",         // 가입 신청 폼
-  missionForm:   "https://forms.gle/yyyyyyy",         // 러닝 인증 제출 폼
+  kakaoOpenChat: "https://open.kakao.com/o/pxirsJLi",  // 오픈채팅 (연결 완료)
+  joinForm:      "https://forms.gle/xxxxxxx",          // 가입 신청 폼
+  missionForm:   "",                                    // 인증은 오픈채팅으로 받으므로 비워둡니다
   instagram:     "https://instagram.com/...",
-  naverMap:      "https://naver.me/xxxxx",            // 집결 장소 지도
+  naverMap:      "https://naver.me/xxxxx",             // 집결 장소 지도
   phone:         "031-000-0000"
 };
 ```
 
 비워두면 버튼은 그대로 보이되 "아직 신청 링크가 연결되지 않았습니다" 안내가 뜹니다.
 
-### 2. 러닝 보드 갱신 — `public/data/board.js`
-
-구글 시트에서 집계된 회원별 인증 횟수·누적 거리를 옮겨 적습니다.
-
-```js
-window.BOARD = {
-  updated: "2026-09-03",
-  members: [
-    { name: "김OO", count: 14, distance: 47.3 }
-  ]
-};
-```
-
-인증 횟수 순으로 자동 정렬되고, 20회 이상 🔥 / 10회 이상 🏃 / 그 외 👍 로 표시됩니다.
+집결 장소나 요금처럼 문구만 바꾸실 때도 `public/index.html` 한 파일만 고치면 됩니다.
 
 ---
 
@@ -95,14 +80,10 @@ npx wrangler deploy
 
 ---
 
-## RUNNING MISSION 인증 흐름 (운영)
+## RUNNING MISSION 운영
 
-```
-회원 → 카카오톡 오픈채팅「러닝 인증하기」
-     → Google Form (이름 / 날짜 / 거리 / 인증사진)
-     → Google Sheets 자동 기록
-     → 1km 이상 자동 판정 → 인증 횟수 누적
-     → board.js 갱신 → 사이트 RUNNING BOARD 반영
-```
+1km 이상 러닝 1건 = 인증 1회.
+매주 일요일, 회원이 카카오톡 오픈채팅방에 기록 사진을 올립니다 (여러 장 한 번에).
+운영진은 일요일 저녁 10분 정도 시트에 옮겨 적고, 10회를 채운 회원에게 단백질 음료를 드립니다.
 
-혜택: 10회 🥤 단백질 음료 1개 (현재 운영) → 20회 🎟 → 30회 🎁 순으로 확대 예정.
+자세한 절차와 공지 문구는 [docs/운영-가이드.md](docs/운영-가이드.md) 에 있습니다.

@@ -104,50 +104,7 @@
   tickCountdown();
   setInterval(tickCountdown, 30000);
 
-  /* ── 3. RUNNING BOARD 렌더 ────────────────────────── */
-  var boardBody = document.getElementById('boardBody');
-  var boardMeta = document.getElementById('boardMeta');
-
-  function badge(count) {
-    if (count >= 20) return '🔥';
-    if (count >= 10) return '🏃';
-    return '👍';
-  }
-
-  function esc(s) {
-    return String(s).replace(/[&<>"]/g, function (c) {
-      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
-    });
-  }
-
-  if (boardBody) {
-    var rows = (window.BOARD && window.BOARD.members) || [];
-    rows = rows.slice().sort(function (a, b) { return b.count - a.count; });
-
-    if (!rows.length) {
-      boardBody.innerHTML = '<tr><td colspan="4">아직 기록이 없습니다. 첫 인증의 주인공이 되어보세요.</td></tr>';
-    } else {
-      var out = '';
-      for (var i = 0; i < rows.length; i++) {
-        var r = rows[i];
-        out += '<tr>' +
-          '<td><span class="board__rank">' + (i + 1) + '</span> ' + esc(r.name) + '</td>' +
-          '<td><span class="board__cnt">' + r.count + '</span>회</td>' +
-          '<td>' + Number(r.distance).toFixed(1) + 'km</td>' +
-          '<td>' + badge(r.count) + '</td>' +
-          '</tr>';
-      }
-      boardBody.innerHTML = out;
-    }
-
-    if (boardMeta) {
-      var updated = (window.BOARD && window.BOARD.updated) || '';
-      boardMeta.textContent = (updated ? updated + ' 기준 · ' : '') +
-        '1km 이상 러닝 1건 = 인증 1회 · 10회 달성 시 단백질 음료 1개';
-    }
-  }
-
-  /* ── 4. 내비게이션 ────────────────────────────────── */
+  /* ── 3. 내비게이션 ────────────────────────────────── */
   var nav = document.getElementById('nav');
   var toggle = document.getElementById('navToggle');
   var mobileMenu = document.getElementById('mobileMenu');
@@ -191,7 +148,7 @@
   window.addEventListener('scroll', requestScroll, { passive: true });
   window.addEventListener('resize', requestScroll, { passive: true });
 
-  /* ── 5. 스크롤 등장 + 현재 섹션 표시 ──────────────── */
+  /* ── 4. 스크롤 등장 + 현재 섹션 표시 ──────────────── */
   var reveals = document.querySelectorAll('.reveal');
 
   // 순차 등장용 순번 부여 (--i)
@@ -232,7 +189,7 @@
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
 
-    ['weekly', 'location', 'groups', 'mission', 'board', 'price'].forEach(function (id) {
+    ['weekly', 'location', 'groups', 'mission', 'price'].forEach(function (id) {
       var el = document.getElementById(id);
       if (el) spy.observe(el);
     });
@@ -240,7 +197,7 @@
     for (var r3 = 0; r3 < reveals.length; r3++) reveals[r3].classList.add('is-in');
   }
 
-  /* ── 6. 연도 ──────────────────────────────────────── */
+  /* ── 5. 연도 ──────────────────────────────────────── */
   var year = document.getElementById('year');
   if (year) year.textContent = String(new Date().getFullYear());
 })();
