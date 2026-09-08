@@ -168,14 +168,44 @@
     });
   }
 
+  var navProgress = document.getElementById('navProgress');
+
   function onScroll() {
     if (nav) nav.classList.toggle('is-stuck', window.scrollY > 12);
+
+    if (navProgress) {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+      navProgress.style.width = Math.min(100, Math.max(0, pct)) + '%';
+    }
   }
+
+  var ticking = false;
+  function requestScroll() {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(function () { onScroll(); ticking = false; });
+  }
+
   onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('scroll', requestScroll, { passive: true });
+  window.addEventListener('resize', requestScroll, { passive: true });
 
   /* ── 5. 스크롤 등장 + 현재 섹션 표시 ──────────────── */
   var reveals = document.querySelectorAll('.reveal');
+
+  // 순차 등장용 순번 부여 (--i)
+  var staggers = document.querySelectorAll('.stagger');
+  for (var st = 0; st < staggers.length; st++) {
+    var kids = staggers[st].children;
+    for (var k = 0; k < kids.length; k++) {
+      kids[k].style.setProperty('--i', String(k));
+    }
+  }
+  var heroReveals = document.querySelectorAll('.hero .reveal');
+  for (var hr = 0; hr < heroReveals.length; hr++) {
+    heroReveals[hr].style.setProperty('--i', String(hr));
+  }
 
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
